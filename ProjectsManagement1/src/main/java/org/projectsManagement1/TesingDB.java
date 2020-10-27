@@ -1,5 +1,6 @@
 package org.projectsManagement1;
 
+import java.time.LocalDate;
 import java.util.stream.Stream;
 
 import org.projectsManagement1.entities.Project;
@@ -20,6 +21,9 @@ public class TesingDB implements CommandLineRunner{
 		Stream.of("Project1", "Project2", "Project3").forEach(projectTitle -> {
 			Project project = new Project();
 			project.setTitle(projectTitle);
+			project.setDescription( "Description : " + projectTitle );
+			project.setStartDate(LocalDate.now());
+			project.setEndDate(LocalDate.of(2021, 1, 1));
 			iProjectService.createProject(project);
 		});
 		
