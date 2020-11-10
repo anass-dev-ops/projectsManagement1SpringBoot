@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/api/projects")
-public class ProjectController {
+public class ProjectRestController {
 	
 	@Autowired
 	private IProjectService iProjectService;
